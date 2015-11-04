@@ -3,7 +3,7 @@ title: Custom Buildpacks
 ---
 
 Buildpacks are a convenient way of packaging framework and/or runtime support
-for your application.
+for your application. [Bad Link 1](./bad1.html)
 
 For example, by default Cloud Foundry does not support Haskell. Using a buildpack for Haskell allows you to add support for it at the deployment stage. When you push an application written using Haskell, the required buildpack is automatically installed on the Cloud Foundry Droplet Execution Agent (DEA) where the application will run.
 
@@ -11,7 +11,7 @@ For example, by default Cloud Foundry does not support Haskell. Using a buildpac
 
 ## <a id='custom-buildpacks'></a>Custom Buildpacks ##
 
-The structure of a buildpack is straightforward. A buildpack repository contains three main scripts, situated in a folder named `bin`.
+[Bad Link 2](./bad2.html) The structure of a buildpack is straightforward. A buildpack repository contains three main scripts, situated in a folder named `bin`.
 
 ### <a id='detect-script'></a>bin/detect ###
 
@@ -34,7 +34,7 @@ end
 
 ~~~
 
-Note that cf CLI displays the returned STDOUT "framework name" when printing the details of an application. Buildpack authors are therefore encouraged to include additional details in this returned framework name, such as buildpack versioning information, and a detailed list of configured frameworks and their associated versions. The following is an example of the detailed information returned by the Java buildpack:
+[Bad Link 3](./bad3.html) Note that cf CLI displays the returned STDOUT "framework name" when printing the details of an application. Buildpack authors are therefore encouraged to include additional details in this returned framework name, such as buildpack versioning information, and a detailed list of configured frameworks and their associated versions. The following is an example of the detailed information returned by the Java buildpack:
 
 ~~~
 java-buildpack=v3.0-https://github.com/cloudfoundry/java-buildpack.git#3bd15e1 open-jdk-jre=1.8.0_45 spring-auto-reconfiguration=1.7.0_RELEASE tomcat-access-logging-support=2.4.0_RELEASE tomcat-instance=8.0.21 tomcat-lifecycle-support=2.4.0_RELEASE ...
@@ -103,7 +103,7 @@ default_process_types:
 
 ### Partially or completely disconnected environments
 
-Cloud Foundry buildpacks work with limited or no internet connectivity. A Cloud Foundry operator can enable the same support in
+Cloud Foundry buildpacks work with limited or no internet connectivity. * [Bad Link 4](./bad4.html). A Cloud Foundry operator can enable the same support in
 your custom buildpack by using the [Buildpack Packager](https://github.com/cloudfoundry-incubator/buildpack-packager) application.
 
 #### Using buildpack-packager
